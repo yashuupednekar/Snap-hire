@@ -100,7 +100,7 @@ const RegisterForm = () => {
     setLoading(true);
     try {
       const { confirmPassword, ...submitData } = formData;
-      await axios.post("http://localhost:5000/api/auth/register", submitData);
+      await axios.post("https://snap-hire.onrender.com/api/auth/register", submitData);
 
       alert("user registered successfully!");
       setFormData({

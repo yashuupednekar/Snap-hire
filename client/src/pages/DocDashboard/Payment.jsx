@@ -43,7 +43,7 @@ const Payment = ({ doctorName }) => {
     setError(null);
     const token = localStorage.getItem("token");
     try {
-      let url = `http://localhost:5000/api/doctors/payments?period=${period}`;
+      let url = `https://snap-hire.onrender.com/api/doctors/payments?period=${period}`;
       if (period === "custom" && startDate && endDate) {
         url += `&startDate=${startDate}&endDate=${endDate}`;
       }

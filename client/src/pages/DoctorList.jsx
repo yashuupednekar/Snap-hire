@@ -25,7 +25,7 @@ const DoctorList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/auth/doctors")
+      .get("https://snap-hire.onrender.com/api/auth/doctors")
       .then((response) => {
         setDoctors(response.data);
         setFilteredDoctors(response.data);

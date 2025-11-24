@@ -22,8 +22,8 @@ const DoctorProfile = () => {
     const fetchData = async () => {
       try {
         const [doctorResponse, reviewsResponse] = await Promise.all([
-          axios.get(`http://localhost:5000/api/auth/doctor/${id}`),
-          axios.get(`http://localhost:5000/api/rating/doctor/${id}`),
+          axios.get(`https://snap-hire.onrender.com/api/auth/doctor/${id}`),
+          axios.get(`https://snap-hire.onrender.com/api/rating/doctor/${id}`),
         ]);
         setDoctor(doctorResponse.data || {});
         setReviews(reviewsResponse.data || []);
@@ -57,12 +57,12 @@ const DoctorProfile = () => {
       const token = localStorage.getItem("token");
       const response = isEditing
         ? await axios.put(
-            `http://localhost:5000/api/rating/${editReviewId}`,
+            `https://snap-hire.onrender.com/api/rating/${editReviewId}`,
             reviewForm,
             { headers: { Authorization: `Bearer ${token}` } }
           )
         : await axios.post(
-            `http://localhost:5000/api/rating`,
+            `https://snap-hire.onrender.com/api/rating`,
             { ...reviewForm, doctorId: id },
             { headers: { Authorization: `Bearer ${token}` } }
           );
@@ -98,7 +98,7 @@ const DoctorProfile = () => {
   const handleDeleteReview = async (reviewId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/rating/${reviewId}`, {
+      await axios.delete(`https://snap-hire.onrender.com/api/rating/${reviewId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const updatedReviews = reviews.filter(
@@ -159,7 +159,7 @@ const DoctorProfile = () => {
               <img
                 src={
                   doctor?.userId?.profileImage
-                    ? `http://localhost:5000/uploads/${
+                    ? `https://snap-hire.onrender.com/uploads/${
                         doctor.userId.profileImage
                       }?t=${new Date().getTime()}`
                     : "https://via.placeholder.com/150"

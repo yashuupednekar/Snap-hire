@@ -37,7 +37,7 @@ const DoctorDashboard = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://localhost:5000/api/doctors/reviews`,
+        `https://snap-hire.onrender.com/api/doctors/reviews`,
         {
           method: "GET",
           headers: {
@@ -63,7 +63,7 @@ const DoctorDashboard = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        `http://localhost:5000/api/doctors/appointments/${appointmentId}/status`,
+        `https://snap-hire.onrender.com/api/doctors/appointments/${appointmentId}/status`,
         {
           method: "PUT",
           headers: {

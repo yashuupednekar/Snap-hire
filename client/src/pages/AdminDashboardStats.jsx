@@ -30,7 +30,7 @@ const AdminDashboardStats = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/report/", {
+      const response = await axios.get("https://snap-hire.onrender.com/api/report/", {
         params: {
           startDate: startDate || null, // Send null if no date is provided
           endDate: endDate || null, // Send null if no date is provided

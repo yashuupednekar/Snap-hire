@@ -28,7 +28,7 @@ const BookAppointment = () => {
     const fetchDoctorDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/auth/doctor/${id}`
+          `https://snap-hire.onrender.com/api/auth/doctor/${id}`
         );
         setDoctor(response.data);
         const days = response.data.availability.map((slot) => slot.day);
@@ -150,7 +150,7 @@ const PaymentForm = ({ doctorId, date, timeSlot, fees, navigate }) => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/booking/book/${doctorId}`,
+        `https://snap-hire.onrender.com/api/booking/book/${doctorId}`,
         { date, timeSlot, paymentMethodId: paymentMethod.id },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

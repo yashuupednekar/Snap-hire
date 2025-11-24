@@ -42,7 +42,7 @@ const PatientProfile = () => {
         }
 
         const response = await axios.get(
-          "http://localhost:5000/api/patient/profile",
+          "https://snap-hire.onrender.com/api/patient/profile",
           {
             headers: { Authorization: `Bearer ${token}` }, // Send token in header
           }
@@ -100,7 +100,7 @@ const PatientProfile = () => {
       }
 
       const response = await axios.put(
-        "http://localhost:5000/api/patient/profile",
+        "https://snap-hire.onrender.com/api/patient/profile",
         data,
         {
           headers: {
@@ -123,7 +123,7 @@ const PatientProfile = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.delete(
-        `http://localhost:5000/api/patient/appointment/cancel/${appointmentId}`,
+        `https://snap-hire.onrender.com/api/patient/appointment/cancel/${appointmentId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

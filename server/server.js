@@ -13,24 +13,43 @@ connectDB();
 
 // Middleware
 app.use(express.json());
-app.use(helmet()); // Security middleware
-app.use(morgan("dev")); // HTTP request logger
+app.use(helmet());
+app.use(morgan("dev"));
+
+// Allowed Origins
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://snap-hire.onrender.com",
+];
 
 // Enable CORS
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow requests from React frontend
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true); // Allow tools like Postman
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      } else {
+        return callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
-    exposedHeaders: ["Content-Type", "Authorization"], // Expose necessary headers
+    exposedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
+// Serve Uploads with CORS
 app.use(
   "/uploads",
   express.static(path.join(__dirname, "uploads"), {
-    setHeaders: (res) => {
-      res.set("Access-Control-Allow-Origin", "http://localhost:5173"); // Allow frontend origin
-      res.set("Cache-Control", "no-store"); // Prevent caching
+    setHeaders: (res, req) => {
+      const origin = req.headers.origin;
+
+      if (allowedOrigins.includes(origin)) {
+        res.setHeader("Access-Control-Allow-Origin", origin);
+      }
+
+      res.setHeader("Cache-Control", "no-store");
     },
   })
 );

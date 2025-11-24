@@ -16,7 +16,7 @@ const AppointmentInvoice = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/appointments/details/${appointmentId}`, {
+      .get(`https://snap-hire.onrender.com/api/appointments/details/${appointmentId}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {

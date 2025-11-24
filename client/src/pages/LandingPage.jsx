@@ -15,7 +15,7 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/auth/doctors");
+        const response = await fetch("https://snap-hire.onrender.com/api/auth/doctors");
         if (!response.ok) {
           throw new Error("Failed to fetch doctors");
         }

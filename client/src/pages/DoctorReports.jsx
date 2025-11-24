@@ -117,7 +117,7 @@ export default DoctorReports;
 //   const token = localStorage.getItem("token");
 //   try {
 //     const response = await fetch(
-//       `http://localhost:5000/api/doctors/appointments/${appointmentId}/status`,
+//       `https://snap-hire.onrender.com/api/doctors/appointments/${appointmentId}/status`,
 //       {
 //         method: "PUT",
 //         headers: {
@@ -214,7 +214,7 @@ export default DoctorReports;
 //   try {
 //     const token = localStorage.getItem("token");
 //     const response = await fetch(
-//       `http://localhost:5000/api/doctors/appointments`,
+//       `https://snap-hire.onrender.com/api/doctors/appointments`,
 //       {
 //         method: "GET",
 //         headers: {

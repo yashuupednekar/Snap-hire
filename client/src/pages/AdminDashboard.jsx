@@ -39,7 +39,7 @@ const AdminDashboard = () => {
     try {
       setLoading((prev) => ({ ...prev, stats: true }));
       const statsRes = await axios.get(
-        "http://localhost:5000/api/admin/dashboard/stats"
+        "https://snap-hire.onrender.com/api/admin/dashboard/stats"
       );
       setStats(statsRes.data);
     } catch (error) {
@@ -52,7 +52,7 @@ const AdminDashboard = () => {
   const fetchUsers = async () => {
     try {
       setLoading((prev) => ({ ...prev, users: true }));
-      const usersRes = await axios.get("http://localhost:5000/api/admin/users");
+      const usersRes = await axios.get("https://snap-hire.onrender.com/api/admin/users");
       setUsers(usersRes.data);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -65,7 +65,7 @@ const AdminDashboard = () => {
     try {
       setLoading((prev) => ({ ...prev, doctors: true }));
       const doctorsRes = await axios.get(
-        "http://localhost:5000/api/admin/doctors"
+        "https://snap-hire.onrender.com/api/admin/doctors"
       );
       setDoctors(doctorsRes.data);
     } catch (error) {
@@ -79,7 +79,7 @@ const AdminDashboard = () => {
     try {
       setLoading((prev) => ({ ...prev, appointments: true }));
       const appointmentsRes = await axios.get(
-        "http://localhost:5000/api/admin/appointments"
+        "https://snap-hire.onrender.com/api/admin/appointments"
       );
       setAppointments(appointmentsRes.data);
     } catch (error) {
@@ -93,7 +93,7 @@ const AdminDashboard = () => {
     try {
       setLoading((prev) => ({ ...prev, payments: true }));
       const paymentsRes = await axios.get(
-        "http://localhost:5000/api/admin/payments"
+        "https://snap-hire.onrender.com/api/admin/payments"
       );
       setPayments(paymentsRes.data);
     } catch (error) {
@@ -105,7 +105,7 @@ const AdminDashboard = () => {
 
   const updateDoctorStatus = async (id, status) => {
     try {
-      await axios.put(`http://localhost:5000/api/admin/doctor/${id}/status`, {
+      await axios.put(`https://snap-hire.onrender.com/api/admin/doctor/${id}/status`, {
         status,
       });
       fetchDoctors(); // Refresh doctors list

@@ -34,7 +34,7 @@ const Dashboard = ({ doctorName }) => {
     setError(null);
     const token = localStorage.getItem("token");
     try {
-      let url = `http://localhost:5000/api/doctors/appointments?period=${period}`;
+      let url = `https://snap-hire.onrender.com/api/doctors/appointments?period=${period}`;
       if (period === "custom" && startDate && endDate) {
         url += `&startDate=${startDate}&endDate=${endDate}`;
       }
@@ -55,7 +55,7 @@ const Dashboard = ({ doctorName }) => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        `http://localhost:5000/api/doctors/appointments/${appointmentId}/status`,
+        `https://snap-hire.onrender.com/api/doctors/appointments/${appointmentId}/status`,
         {
           method: "PUT",
           headers: {
