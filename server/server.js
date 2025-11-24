@@ -19,7 +19,7 @@ app.use(morgan("dev"));
 // Allowed Origins
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://snap-hire.vercel.app/",
+  "https://snap-hire.vercel.app",
 ];
 
 // Enable CORS
