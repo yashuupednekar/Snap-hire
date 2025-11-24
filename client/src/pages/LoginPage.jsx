@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FaUserAlt, FaLock } from "react-icons/fa";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom"; 
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
