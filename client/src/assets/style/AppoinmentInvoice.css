@@ -1,0 +1,26 @@
+.invoice {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .invoice h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .invoice h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .invoice p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .invoice .table {
+    margin-top: 1rem;
+  }
+  
+  .invoice .text-muted {
+    color: #6c757d;
+  }

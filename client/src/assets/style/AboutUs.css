@@ -1,0 +1,9 @@
+.container1{
+    transform: translateY(-150%); /* Fine-tune the upward shift */
+    font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+}

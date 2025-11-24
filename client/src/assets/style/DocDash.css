@@ -1,0 +1,33 @@
+/* Sea-themed colors */
+.bg-sea {
+    background-color: #1a535c;
+    /* Dark sea green */
+}
+
+.bg-light-sea {
+    background-color: #ffffff;
+    /* Light sea green */
+}
+
+/* Additional styling for buttons and links */
+.nav-link.btn {
+    text-align: left;
+    padding: 0.5rem 1rem;
+    border: none;
+    color: white;
+}
+
+.nav-link.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-danger {
+    background-color: #ff6b6b;
+    /* Coral red */
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #ff5252;
+    /* Lighter coral red */
+}

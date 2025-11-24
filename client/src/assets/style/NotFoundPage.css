@@ -1,0 +1,185 @@
+/* General Styling */
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    position: relative;
+    transition: background-position 0.1s ease-out;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+/* Content Styling */
+.not-found-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Camera Icon */
+.camera-icon {
+    position: absolute;
+    font-size: 3rem;
+    color: #ff6f61;
+    /* Vibrant coral color */
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+    z-index: 3;
+}
+
+.camera-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Main Heading */
+.not-found-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    animation: slideIn 1s ease-in-out;
+}
+
+.glitch {
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        transform: translate(2px, -2px);
+    }
+
+    60% {
+        transform: translate(-2px, 2px);
+    }
+
+    80% {
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Creative Message */
+.not-found-description {
+    font-size: 1.2rem;
+    margin: 1rem 0 2rem;
+    animation: slideIn 1.2s ease-in-out;
+    color: #ccc;
+}
+
+/* Call-to-Action Button */
+.not-found-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: #ff6f61;
+    /* Vibrant coral color */
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1.5s ease-in-out;
+    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.3);
+}
+
+.not-found-button:hover {
+    background: #ff4a3d;
+    /* Darker coral on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 111, 97, 0.4);
+}
+
+/* Mini-Game: Find the Focus */
+.mini-game {
+    margin-top: 2rem;
+}
+
+.focus-slider {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.focus-image {
+    width: 200px;
+    height: 200px;
+    background: url("../assets/images/blurred-photo.jpg") center/cover;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Mute Button */
+.mute-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

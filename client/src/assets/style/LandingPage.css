@@ -1,0 +1,66 @@
+/* Set the background color to beige */
+.bg-beige {
+    background-color: #f5f5dc; /* Beige color */
+  }
+  
+  /* Set the text color to light brown */
+  .text-light-brown {
+
+  
+  
+    color: #0d0d0c; /* Light brown color */ 
+    position: relative;
+    top: 45;
+    left: 5;
+    transform: translateY(-80%); /* Fine-tune the upward shift */
+    
+  }
+  
+  /* Update the button styles to match the theme */
+  .btn-primary {
+    background-color: #8b7355; /* Light brown color */
+    border-color: #8b7355;
+    color: #fff; /* White text */
+  }
+  
+  .btn-primary:hover {
+    background-color: #6b5b4f; /* Darker shade for hover */
+    border-color: #6b5b4f;
+  }
+  
+  .btn-outline-primary {
+    border-color: #8b7355; /* Light brown color */
+    color: #8b7355;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #8b7355;
+    color: #fff;
+  }
+  
+  /* Update card styles */
+  .card {
+    background-color: #fff; /* White background for cards */
+    border: 1px solid #e0d3b8; /* Light brown border */
+  }
+  
+  .card-title {
+    color: #000000; /* Light brown color */
+  }
+  
+  /* Update section headings */
+  .section-heading {
+    color: #8b7355; /* Light brown color */
+  }
+  
+  /* Update the hero section */
+  .hero-section {
+    background-color: #f5f5dc; /* Beige background */
+    color: #8b7355; /* Light brown text */
+  }
+  
+  /* Update the footer */
+  .footer {
+    background-color: #8b7355; /* Light brown background */
+    color: #fff; /* White text */
+  }
